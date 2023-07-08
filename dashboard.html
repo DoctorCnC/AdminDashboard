@@ -1,52 +1,263 @@
 <!DOCTYPE html>
 <html>
+
 <head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <title>Sidebar Example</title>
   <style>
     /* CSS styles for the sidebar */
+    .container {
+      display: grid;
+      grid-template-areas:
+        "header header2 header3"
+        "sidebar main main2"
+        "footer1 footer2 footer3";
+      grid-template-rows: auto 1fr 1fr;
+      grid-template-columns: 200px 2fr 1fr;
+      grid-gap: 10px;
+      height: 500px;
+    }
+
+    .header {
+      grid-area: header;
+      background-color: #f2f2f2;
+      display: inline-block;
+      column-gap: 10px;
+
+    }
+
+    .header2 form {
+      background-color: #4654e1;
+      width: 300px;
+      height: 44px;
+      border-radius: 5px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+
     .sidebar {
-      width: 200px;
+      grid-area: sidebar;
+      background-color: #f2f2f2;
+    }
+
+    .header3 {
+      display: flex;
+      align-items: top;
+      margin: 0;
+      flex-direction: column;
+      column-gap: 10px;
+    }
+
+
+    .header3 i {
+      margin-right: 10px;
+    }
+
+    .header3 h2 {
+      margin: 0;
+    }
+
+
+
+    .main {
+
+      background-color: #f2f2f2;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      grid-gap: 10px;
+      padding: 20px;
+
+
+
+    }
+
+    .item {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      border: 2px solid #333;
+      border-left: 5px solid gold;
+
+
       background-color: #f2f2f2;
       padding: 20px;
     }
 
-    .sidebar h1 {
-      font-size: 24px;
-      font-weight: bold;
-      margin-bottom: 20px;
+
+
+
+    .main2 {
+      display: flex;
+      margin: 20px;
+
     }
 
-    .sidebar ul {
-      list-style-type: none;
-      padding: 0;
-      margin: 0;
+    .ele {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
 
-    .sidebar li {
-      margin-bottom: 10px;
+    .ele i {
+      margin-right: 10px;
     }
 
-    .sidebar a {
-      text-decoration: none;
-      color: #333;
+
+
+    .footer {
+      grid-area: footer;
+      background-color: #f2f2f2;
+    }
+
+    .icon-small i {
+      float: left;
+      margin-right: 10px;
+      height: 38px;
+      width: 38px;
+      color: #fff;
+      background-color: #888;
+      border-radius: 10%;
+      text-align: center;
+      vertical-align: middle;
+      padding-top: 12px;
+
     }
   </style>
 </head>
+
 <body>
-  <div class="sidebar">
-    <h1>Dashboard</h1>
-    <ul>
+  <div class="container">
+
+    <div class="header">
+      <h1>header</h1>
       <li><a href="#">Profile</a></li>
       <li><a href="#">Messages</a></li>
       <li><a href="#">History</a></li>
       <li><a href="#">Tasks</a></li>
       <li><a href="#">Communities</a></li>
-    </ul>
-    <h1>Settings</h1>
-    <ul>
+
+    </div>
+
+
+    <div class="sidebar">
+
+      <li><a href="#">Settings</a></li>
       <li><a href="#">Support</a></li>
       <li><a href="#">Privacy</a></li>
-    </ul>
-  </div>
+
+    </div>
+
+    <div class="header2">
+      <form id="form">
+        <input type="search" id="query" name="q" placeholder="Search...">
+        <button>Search</button>
+      </form>
+      <h4>Hi there</h4>
+      <h1> Morgan Oakely (@morgan)</h1>
+
+
+    </div>
+    <div class="header3">
+      <i class="fa fa-bell"></i>
+      <i class="fa fa-reddit"></i>
+      <h2> Morgan Oakely<h2>
+
+          <div class=" button">
+            <button type="button">New!</button>
+            <button type="button">Upload</button>
+            <button type="button">Share!</button>
+          </div>
+    </div>
+
+    <div class="main">
+
+
+      <div class="item 1">
+        <h2> Super Cool Project</h2>
+        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam fugiat modi et iusto consequunturborum
+          doloremque repellat recusandae! Consequuntur ipsam ad distinctio!</p>
+      </div>
+      <div class="item 2">
+        <h2> Super Cool Project</h2>
+        <p> Lorem ipsum dolor sit amet possimus a natus, ipsa ab laborum doloremque repellat recusandae! Consequuntur
+          ipsam ad distinctio!</p>
+      </div>
+      <div class=" item 3">
+        <h2> Super Cool Project</h2>
+        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam fugiat modi et iusto consequuntur ea
+          molestias laborum doloremque repellat recusandae! Consequuntur ipsam ad distinctio!</p>
+      </div>
+      <div class=" item 4">
+        <h2> Super Cool Project</h2>
+
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui harum voluptatibus dicta sit aliquid! </p>
+      </div>
+
+      <div class="item 5">
+        <h2> Super Cool Project</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus vitae quaerat magnam.</p>
+      </div>
+
+      <div class="item 6">
+        <h2> Super Cool Project</h2>
+        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, impedit</p>
+      </div>
+
+
+
+    </div>
+
+    <div clss="main2">
+      <h3>Announcements</h3>
+
+      <div class="ele 1">
+        <h2> Site Maintenance</h2>
+        <p>Vestibulum condimentum tellus lacus,
+          in accumsan elit maximus ac. Donec hendrerit sodales congue...</p>
+
+      </div>
+      <hr>
+
+      <div class="ele 2">
+        <h2> Community Share Day</h2>
+
+
+        <p> am vel lectus tincidunt, rutrum nulla eu, ornare libero. Aliquam dictum accumsan porttitor...</p>
+
+      </div>
+      <hr>
+
+      <div class="ele 3">
+        <h2> Updated Privacy Policy</h2>
+
+        <p> Phasellus efficitur nisi eget elit
+          consectetur, eget condimentum ante auctor. Cras fringilla sagittis sem in mattis...</p>
+
+
+
+      </div>
+
+      <h2>Trending</h2>
+
+
+      <div class="footer3">
+        <div class="col span-1-of-3">
+          <span class="icon-small">
+            <i class="fa fa-reddit icon"></i>
+            <h4>@tegan</h4>
+            <h5>World peace Builder</h5>
+          </span>
+        </div>
+
+
+
+
+      </div>
+
+    </div>
+
 </body>
+
 </html>
