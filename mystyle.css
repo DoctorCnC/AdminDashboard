@@ -1,0 +1,76 @@
+* {
+   margin: 0;
+   padding: 0;
+}
+
+.grid {
+   display: grid;
+   grid-template-columns: 20% 80%;
+}
+
+.sidebar {
+   background-color: #1992d4;
+   height: 100vh;
+}
+body{
+   font-family: Robto, sans-serif;
+}
+
+
+.logo-text {
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   margin:20px 40px;
+   font-size: 25px;
+
+}
+
+.icon{
+   font-size:30px;
+   color: white;
+
+
+}
+
+
+.list-items{
+   display: flex;
+   flex-direction: row;
+   justify-content: flex-start;
+   align-items: center;
+   margin:10px 40px;
+}
+.text{
+   font-size: 20px;
+   margin-left: 14px;
+   color: white;
+   font-weight: 700;
+}
+
+
+
+.list-items-bottom{
+   margin-left:40px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.main {
+   background-color: red;
+   height: 100vh;
+
+}
